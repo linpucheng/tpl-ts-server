@@ -5,4 +5,8 @@ const server = http.createServer((request, response) => {
   response.end('Hello, world!');
 });
 
-server.listen('8080', 'localhost');
+//监听端口
+const hostname = 'localhost';
+const port = 8080;
+server.listen(port, hostname);
+console.log(`Server is alive at: http://${hostname}:${port}`);
